@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation & Hosting — CipherGrid Developer Documentation</title>
+  <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/doc-style.css">
+</head>
+<body>
+  <div class="doc-sidebar">
+    <a href="../index.html" class="d-flex align-items-center mb-3 text-decoration-none">
+      <img src="../assets/images/logo/logo.svg" alt="CipherGrid Logo" width="180">
+    </a>
+    <span class="badge bg-primary text-uppercase font-mono small">Developer Manual v1.0.0</span>
+    <ul class="doc-nav-list">
+      <li><a href="index.html" class="">1. Overview & Setup</a></li><li><a href="installation.html" class="active">2. Installation & Hosting</a></li><li><a href="features.html" class="">3. Architecture & Features</a></li><li><a href="customization.html" class="">4. Customization Guide</a></li><li><a href="faq.html" class="">5. Troubleshooting & FAQ</a></li>
+    </ul>
+    <div class="mt-5 pt-3 border-top border-secondary small text-muted">
+      <a href="../index.html" class="text-accent text-decoration-none"><i class="bi bi-arrow-left"></i> Back to Live Demo</a>
+    </div>
+  </div>
+
+  <main class="doc-main">
+    
+<div class="mb-5">
+  <span class="badge bg-success font-mono mb-2">DEPLOYMENT GUIDE</span>
+  <h1 class="display-5 fw-bold text-light mb-3">Installation &amp; Hosting</h1>
+  <p class="lead text-secondary">CipherGrid is a static HTML5 template that requires no server-side compilation, build tools, or database to run.</p>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">1. Local Preview Testing</h2>
+  <p>You can run CipherGrid instantly using any lightweight local static server:</p>
+  <pre><code># Option A: Python 3 built-in server
+python -m http.server 8080
+
+# Option B: Node.js npx serve
+npx serve .
+
+# Option C: VS Code Live Server
+Right click index.html -> "Open with Live Server"</code></pre>
+  <p>Then navigate to <code>http://localhost:8080</code> in any modern browser.</p>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">2. Web Server Production Hosting</h2>
+  <p>To deploy on production web servers, copy the entire contents of the <code>SOURCE</code> folder to your webroot:</p>
+  <ul>
+    <li><strong>Apache HTTP Server:</strong> Upload all files to <code>/var/www/html/</code> or <code>public_html/</code>.</li>
+    <li><strong>Nginx:</strong> Point your <code>root</code> directive in <code>/etc/nginx/sites-available/default</code> to the directory.</li>
+    <li><strong>Netlify / Vercel / Cloudflare Pages:</strong> Simply connect your Git repository and set publish directory to <code>.</code> (root). No build command required!</li>
+    <li><strong>GitHub Pages:</strong> Push to a GitHub repository, enable GitHub Pages from <code>main</code> branch.</li>
+  </ul>
+</div>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features & Scripts — CipherGrid Developer Documentation</title>
+  <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/doc-style.css">
+</head>
+<body>
+  <div class="doc-sidebar">
+    <a href="../index.html" class="d-flex align-items-center mb-3 text-decoration-none">
+      <img src="../assets/images/logo/logo.svg" alt="CipherGrid Logo" width="180">
+    </a>
+    <span class="badge bg-primary text-uppercase font-mono small">Developer Manual v1.0.0</span>
+    <ul class="doc-nav-list">
+      <li><a href="index.html" class="">1. Overview & Setup</a></li><li><a href="installation.html" class="">2. Installation & Hosting</a></li><li><a href="features.html" class="active">3. Architecture & Features</a></li><li><a href="customization.html" class="">4. Customization Guide</a></li><li><a href="faq.html" class="">5. Troubleshooting & FAQ</a></li>
+    </ul>
+    <div class="mt-5 pt-3 border-top border-secondary small text-muted">
+      <a href="../index.html" class="text-accent text-decoration-none"><i class="bi bi-arrow-left"></i> Back to Live Demo</a>
+    </div>
+  </div>
+
+  <main class="doc-main">
+    
+<div class="mb-5">
+  <span class="badge bg-primary font-mono mb-2">INTERACTIVE LOGIC</span>
+  <h1 class="display-5 fw-bold text-light mb-3">Features &amp; Script Architecture</h1>
+  <p class="lead text-secondary">Detailed review of all interactive ES6+ components embedded in <code>assets/js/main.js</code>.</p>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">1. Live Threat Radar (Canvas Visualizer)</h2>
+  <p>The interactive radar located on <code>index.html</code> is rendered dynamically via the HTML5 <code>&lt;canvas&gt;</code> API. It performs a continuous 360-degree sweep with conic gradients and displays pulsing adversary blips.</p>
+  <p>You can customize the blips or add your own coordinates in <code>assets/js/main.js</code> under the <code>blips</code> array:</p>
+  <pre><code>const blips = [
+  { r: radius * 0.45, theta: 0.8, label: "CVE-2026-1049", type: "critical" },
+  { r: radius * 0.72, theta: 2.3, label: "BOTNET-SCAN", type: "high" }
+];</code></pre>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">2. Security ROI &amp; Risk Assessment Calculator</h2>
+  <p>The interactive slider on the homepage recalculates breach risk exposure and annual savings in real time based on endpoint count and industry multipliers.</p>
+  <p>The calculation formula can be fine-tuned in <code>assets/js/main.js</code>:</p>
+  <pre><code>const baseBreachRisk = endpoints * 320 * industryRisk * complianceMultiplier;
+const estimatedSavings = baseBreachRisk * 0.78; // 78% mitigation</code></pre>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">3. CVE Advisory Database Search &amp; Filter</h2>
+  <p>Instant client-side text filtering and severity level button toggles on <code>threat-lab.html</code>. No page reloads or database round-trips required.</p>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">4. Transparent Pricing Switcher</h2>
+  <p>The Monthly / Annual switcher on <code>pricing.html</code> updates all pricing values dynamically reading from <code>data-monthly-price</code> and <code>data-annual-price</code> HTML attributes.</p>
+</div>
+
+  </main>
+</body>
+</html>

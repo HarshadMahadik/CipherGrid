@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64" fill="none">
+  <defs>
+    <linearGradient id="cg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(8, 8)">
+    <path d="M24 2 L42 9 C42 27 34 40 24 46 C14 40 6 27 6 9 Z" fill="#0F172A" stroke="url(#cg-grad)" stroke-width="2.5"/>
+    <path d="M24 10 V38" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <path d="M13 22 H35" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <path d="M15 31 H33" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <circle cx="24" cy="22" r="4" fill="#38BDF8" />
+    <circle cx="24" cy="22" r="2" fill="#FFFFFF" />
+  </g>
+  <text x="68" y="37" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">CIPHER<tspan fill="#38BDF8">GRID</tspan></text>
+  <text x="68" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#94A3B8" letter-spacing="2">ENTERPRISE DEFENSE</text>
+</svg>

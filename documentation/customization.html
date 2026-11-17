@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customization Guide — CipherGrid Developer Documentation</title>
+  <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/doc-style.css">
+</head>
+<body>
+  <div class="doc-sidebar">
+    <a href="../index.html" class="d-flex align-items-center mb-3 text-decoration-none">
+      <img src="../assets/images/logo/logo.svg" alt="CipherGrid Logo" width="180">
+    </a>
+    <span class="badge bg-primary text-uppercase font-mono small">Developer Manual v1.0.0</span>
+    <ul class="doc-nav-list">
+      <li><a href="index.html" class="">1. Overview & Setup</a></li><li><a href="installation.html" class="">2. Installation & Hosting</a></li><li><a href="features.html" class="">3. Architecture & Features</a></li><li><a href="customization.html" class="active">4. Customization Guide</a></li><li><a href="faq.html" class="">5. Troubleshooting & FAQ</a></li>
+    </ul>
+    <div class="mt-5 pt-3 border-top border-secondary small text-muted">
+      <a href="../index.html" class="text-accent text-decoration-none"><i class="bi bi-arrow-left"></i> Back to Live Demo</a>
+    </div>
+  </div>
+
+  <main class="doc-main">
+    
+<div class="mb-5">
+  <span class="badge bg-warning text-dark font-mono mb-2">DEVELOPER GUIDE</span>
+  <h1 class="display-5 fw-bold text-light mb-3">Customization Guide</h1>
+  <p class="lead text-secondary">How to customize colors, typography, logos, and form handling for your client or project.</p>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">1. Customizing Design Tokens (Colors &amp; Theme)</h2>
+  <p>All colors, shadows, and geometry are centralized in <code>assets/css/style.css</code> under <code>:root</code>. Simply modify these variables to match your client's brand palette:</p>
+  <pre><code>:root {
+  /* Change brand primary color */
+  --cg-primary: #2563eb;        /* Main brand blue */
+  --cg-primary-hover: #1d4ed8;  /* Hover state */
+  --cg-accent: #38bdf8;         /* Cyan accent / highlight */
+  
+  /* Change background surfaces */
+  --cg-bg-main: #060b17;        /* Body background */
+  --cg-bg-secondary: #0b1120;   /* Secondary card surface */
+}</code></pre>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">2. Replacing the Brand Logo</h2>
+  <p>The logo is located in <code>assets/images/logo/logo.svg</code>. You can replace this SVG directly with your company's SVG, or replace it with a PNG image by modifying the <code>&lt;img&gt;</code> tag in the header and footer:</p>
+  <pre><code>&lt;a class="navbar-brand" href="index.html"&gt;
+  &lt;img src="assets/images/logo/your-logo.png" alt="Company Name" width="200" height="40"&gt;
+&lt;/a&gt;</code></pre>
+</div>
+
+<div class="doc-card">
+  <h2 class="h4 text-light mb-3">3. Connecting Forms to a Backend</h2>
+  <p>By default, forms on <code>contact.html</code>, the newsletter bar, and the Request Demo modal operate in demonstration mode with full HTML5 client-side validation.</p>
+  <p>To connect to a live backend, choose one of these popular approaches:</p>
+  <ul>
+    <li><strong>PHP Mailer:</strong> Create a <code>sendmail.php</code> script and set the form <code>action="sendmail.php" method="POST"</code>.</li>
+    <li><strong>Formspree / Formkeep / Basin:</strong> Set <code>action="https://formspree.io/f/YOUR_FORM_ID" method="POST"</code>.</li>
+    <li><strong>REST API / Node.js / Python Flask:</strong> Replace the demo handler in <code>assets/js/main.js</code> with a standard <code>fetch('/api/contact', { method: 'POST', body: JSON.stringify(...) })</code>.</li>
+  </ul>
+</div>
+
+  </main>
+</body>
+</html>

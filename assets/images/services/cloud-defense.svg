@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260" fill="none">
+      <defs>
+        <linearGradient id="card-grad-cloud-defense" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1E293B" />
+          <stop offset="100%" stop-color="#0F172A" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="260" rx="16" fill="url(#card-grad-cloud-defense)" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="70" cy="70" r="36" fill="#818CF8" fill-opacity="0.15" stroke="#818CF8" stroke-width="1.5"/>
+      <g transform="translate(56, 56) scale(1.15)" stroke="#818CF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+      </g>
+      <text x="40" y="145" font-family="sans-serif" font-size="20" font-weight="700" fill="#F8FAFC">Cloud Security Posture</text>
+      <text x="40" y="175" font-family="sans-serif" font-size="13" fill="#94A3B8">Continuous monitoring, proactive automated containment,</text>
+      <text x="40" y="195" font-family="sans-serif" font-size="13" fill="#94A3B8">and military-grade SLA backed by certified cyber specialists.</text>
+      <line x1="40" y1="225" x2="360" y2="225" stroke="#334155" stroke-width="1"/>
+      <text x="40" y="244" font-family="monospace" font-size="11" fill="#818CF8" font-weight="600">ENTERPRISE GRADE SLA 99.99%</text>
+    </svg>
